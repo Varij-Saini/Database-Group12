@@ -1,3 +1,4 @@
+# Adapted from https://tutorial101.blogspot.com/2020/03/python-flask-employee-create-read.html 
 from flask import Flask, render_template, request, flash, redirect, url_for
 from flaskext.mysql import MySQL
 import pymysql

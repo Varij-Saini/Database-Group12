@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h1>Add Customer</h1>
+        <form method='POST' action="">
+        Customer ID: <input type= 'text' name = "cust_id"/><br>
+        First name: <input type = "text" name='firstname'/><br>
+        Last name: <input type = "text" name='lastname'/><br>
+        Address: <input type = "text" name='address'/><br>
+        Cardinfo: <input type = "text" name='cardinfo'/><br>
+        Phone number: <input type = "text" name='phone'/><br>
+        <input type = "submit"/>
+        </form>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+       {% endwith %}
+
+    </body>
+</html>

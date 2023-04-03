@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="{{ url_for('update_booking', book_id=books.book_id) }}" method="POST">
+          <div class="form-group">
+            <input type="text" name="check_in" value="{{books.check_in}}" class="form-control" placeholder='Check in date (YYYY-MM-DD)'>
+          </div>
+          <div class="form-group">
+            <input type="text" name="check_out" value="{{books.check_out}}" class="form-control" placeholder='Check out date (YYYY-MM-DD)'>
+          </div>
+          <div class="form-group">
+            <input type="text" name="cust_id" value="{{books.cust_id}}" class="form-control" placeholder='Customer ID'>
+          </div>
+          <div class="form-group">
+            <input type="text" name="room_id" value="{{books.room_id}}" class="form-control" placeholder='Room ID'>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}

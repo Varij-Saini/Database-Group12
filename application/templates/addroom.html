@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <h1>Add Room</h1>
+        <form method='POST' action="">
+        Room ID: <input type= 'text' name = "room_id"/><br>
+        Room floor: <input type = "text" name='floor'/><br>
+        Room type: <input type = "text" name='type'/><br>
+        Room price: <input type = "text" name='price'/><br>
+        <input type = "submit"/>
+        </form>
+       {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+       {% endwith %}
+    </body>
+</html>

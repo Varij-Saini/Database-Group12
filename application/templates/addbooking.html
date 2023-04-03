@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>Add Booking</h1>
+        <form method='POST' action="">
+        Booking ID: <input type= 'text' name = "book_id"/><br>
+        Customer ID: <input type= 'text' name = "cust_id"/><br>
+        Room ID: <input type= 'text' name = "room_id"/><br>
+        Check in date (YYYY-MM-DD): <input type = "text" name='check_in'/><br>
+        Check out date (YYYY-MM-DD): <input type = "text" name='check_out'/><br>
+        <input type = "submit"/>
+        </form>
+
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+       {% endwith %}
+
+    </body>
+</html>

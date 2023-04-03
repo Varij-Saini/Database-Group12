@@ -1,0 +1,31 @@
+{% extends "main.html" %}
+{% block body %}
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="{{ url_for('update_cust', cust_id=customer.cust_id) }}" method="POST">
+          <div class="form-group">
+            <input type="text" name="firstname" value="{{customer.firstname}}" class="form-control" placeholder='First Name'>
+          </div>
+          <div class="form-group">
+            <input type="text" name="lastname" value="{{customer.lastname}}" class="form-control" placeholder='Last Name'>
+          </div>
+          <div class="form-group">
+            <input type="text" name="address" value="{{customer.address}}" class="form-control" placeholder='Address'>
+          </div>
+          <div class="form-group">
+            <input type="text" name="cardinfo" value="{{customer.cardinfo}}" class="form-control" placeholder='Card Info'>
+          </div>
+          <div class="form-group">
+            <input type="text" name="phone" value="{{customer.phone}}" class="form-control" placeholder='Phone'>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+{% endblock %}
